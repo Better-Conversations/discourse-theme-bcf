@@ -1,7 +1,7 @@
 {
-  "name": "Mint",
-  "about_url": "https://meta.discourse.org/t/mint-a-modern-theme-for-discourse/202822",
-  "license_url": "https://github.com/discourse/discourse-mint-theme/blob/main/LICENSE",
+  "name": "BCF-Bespoke-Theme",
+  "about_url":null,
+  "license_url":null,
   "color_schemes": {
     "mint-light": {
       "primary": "454545",
@@ -24,7 +24,7 @@
     }
   },
   "components": [
-    "https://github.com/discourse/discourse-showcased-categories.git",
+    "https://github.com/nolosb/discourse-featured-cards",
     "https://github.com/discourse/discourse-search-banner.git"
   ]
 }

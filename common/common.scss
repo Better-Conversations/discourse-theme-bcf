@@ -61,11 +61,18 @@
 
 .navigation-categories .search-banner {
   border-radius: var(--mint-border-radius);
-  height: 350px;
+ 
   box-sizing: border-box;
-  padding: 2.5em 0 3em;
+ 
   margin: 1em auto;
   max-width: 1110px;
+}
+
+.navigation-container {
+  margin-top: 2em;
+  .category-breadcrumb{
+    display: none
+  }
 }
 
 .category-box-inner {
@@ -116,7 +123,7 @@ a {
     margin: 0;
     overflow: hidden;
     border: none;
-    border-top: 8px solid;
+    border-top: 8px solid var(--category-badge-color);
     background: var(--secondary);
     border-radius: var(--mint-border-radius);
     box-shadow: 0px 2px 3px 0px rgba(2, 47, 57, 0.14);
@@ -125,6 +132,9 @@ a {
       padding: 0;
       .category-details {
         padding: 2em;
+      };
+      .category-logo{
+        margin-top: 1em;
       }
     }
     &:hover {
@@ -146,6 +156,12 @@ a {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
   margin: 0 0.59em 2em 0.59em;
   background: var(--primary-very-low);
+}
+
+@supports (--custom: property) {
+  .category-logo.aspect-image {
+    --max-height: 70px; // change 200 to the desired height
+  }
 }
 
 #create-topic {
@@ -215,9 +231,9 @@ a {
   &.active {
     border-radius: var(--mint-border-radius);
     transition: all 0.3s linear;
-    background: var(--mint-color-mint);
+    background: var(--tertiary);
     color: var(--secondary);
-    border: 1px solid var(--mint-color-mint);
+    border: 1px solid var(--tertiary);
   }
 }
 
@@ -382,4 +398,150 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
   .showcased-topic-list {
     display: block;
   }
+}
+
+
+.fk-d-button-tooltip{
+  display: none;
+}
+
+
+.latest-topics-snippet{
+.topic-list {
+  border-collapse: separate;
+  border-spacing: 0 0.25em;
+  display: contents;
+  .topic-list-header {
+    tr {
+      display: flex;
+      border-bottom: none;
+    }
+    display: contents;
+    .topic-list-data.default {
+      width: 63%;
+    }
+    .topic-list-data.posters {
+      width: 7%;
+      min-width: 66px;
+    }
+    .topic-list-data.posts {
+      width: 15%;
+    }
+    .topic-list-data.activity {
+      width: 15%;
+    }
+  }
+  
+  .topic-list-body {
+    display: contents;
+    .topic-list-item-separator {
+      width: 100%;
+      margin: 0.75em 0;
+      display: flex;
+      .topic-list-data {
+        width: 100%;
+      }
+    }
+    .topic-list-item {
+      width: 100%;
+      display: flex;
+      margin-bottom: 0.5em;
+      background-color: var(--secondary);
+      border: 1px solid rgba(var(--primary-rgb), 0.2);
+      border-radius: 1em;
+      position: relative;
+      transition: box-shadow 100ms ease-in-out;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      &.visited {
+        border: 1px solid rgba(var(--primary-rgb), 0.1);
+        .discourse-tag {
+          opacity: 0.75;
+        }
+        &:hover {
+          border: 1px solid rgba(var(--primary-rgb), 0.25);
+          .discourse-tag {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover {
+        background-color: var(--secondary);
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(var(--primary-rgb), 0.3);
+        a.title:not(.badge-notification),
+        a.topic-excerpt {
+          color: var(--primary) !important;
+        }
+      }
+      .topic-list-data.main-link {
+        width: 63%;
+        order: 2;
+      }
+      .topic-list-data.posters {
+        width: 7%;
+        min-width: 66px;
+        order: 1;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a:not(:first-of-type) {
+          display: none;
+        }
+        a {
+          display: none; /* Hide all <a> elements by default */
+        }
+        a:first-child {
+          display: block;
+          position: relative;
+          
+        }
+        a:last-child {
+          display: block;
+          position: relative;
+          right: 5px;
+          top: 20px;
+         
+        }
+      }
+      .topic-list-data.posts {
+        width: 15%;
+        order: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .topic-list-data.age {
+        width: 15%;
+        order: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .posters {
+      margin-left: 10px;
+      margin-bottom: 10px;
+      .avatar {
+        width: 40px;
+        height: 40px;
+        
+      }
+      
+      a:not(:first-of-type) {
+        margin-left: -10px;
+        width: 30px;
+        .avatar {
+          background-color: var(--secondary);
+          border: 2px solid var(--secondary);
+        }
+      }
+    }
+  }
+}
+
+.topic-list-data.num.views {
+  display: none;
+}
 }
