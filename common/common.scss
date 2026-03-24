@@ -148,10 +148,19 @@ a {
       padding: 0;
       .category-details {
         padding: 1.5em;
+        position: relative;
         .badge-category__icon .d-icon {
           font-size: 3em;
           display: block;
           margin-bottom: 0.25em;
+        }
+        .d-icon-lock {
+          font-size: 0.75em !important;
+          position: absolute;
+          bottom: 0.75em;
+          right: 0.75em;
+          opacity: 0.4;
+          display: inline;
         }
       }
       .category-logo {
