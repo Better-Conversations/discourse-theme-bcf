@@ -269,16 +269,16 @@ a {
   box-shadow: none !important;
   outline: none !important;
   transition: all 0.2s ease;
+  color: var(--primary-medium) !important;
+  background: transparent !important;
   &:hover {
-    background-color: var(--tertiary-low) !important;
-    color: var(--tertiary) !important;
+    background-color: var(--primary-very-low) !important;
+    color: var(--primary) !important;
   }
   &.active {
-    background: var(--tertiary-low) !important;
-    color: var(--tertiary) !important;
-    font-weight: 600;
-    border: none !important;
-    box-shadow: none !important;
+    background: var(--primary) !important;
+    color: var(--secondary) !important;
+    font-weight: 500;
   }
 }
 

@@ -74,9 +74,10 @@ Colours follow the BCF brand system:
 | Colour | Hex | Used for |
 |---|---|---|
 | Teal | `#3DBBAA` / `#5BC3B6` | Foundation, brand identity |
-| Purple | `#8854D0` / `#7C5CB8` | Online discussions, community |
+| Coral | `#E8635A` / `#D4776E` | Community, discussions |
 | Orange | `#FBB050` / `#E8935A` | Course-related |
-| Blue | `#4BBBF0` | Partners |
+| Blue | `#4BBBF0` | Partners, exploration |
+| Purple | `#7C5CB8` | Used sparingly for accent |
 | Slate | `#6C7A89` / `#8E99A4` | Admin categories |
 
 Set the **category badge colour** for each category in **Admin > Categories > [category] > Settings**:
@@ -85,15 +86,15 @@ Set the **category badge colour** for each category in **Admin > Categories > [c
 |---|---|---|
 | start here | Teal | `#3DBBAA` |
 | course updates | Orange | `#FBB050` |
-| in action | Warm orange | `#E8935A` |
+| in action | Coral | `#E8635A` |
 | the foundation | Teal | `#5BC3B6` |
-| anything else? | Purple | `#8854D0` |
-| digging deeper | Light purple | `#7C5CB8` |
-| course delivery | Warm orange | `#E8935A` |
+| anything else? | Coral | `#D4776E` |
+| digging deeper | Blue | `#4BBBF0` |
+| course delivery | Orange | `#E8935A` |
 | translations | Teal | `#3DBBAA` |
 | BCF faculty | Teal | `#5BC3B6` |
 | staff | Slate | `#6C7A89` |
-| site feedback | Light slate | `#8E99A4` |
+| site feedback | Slate | `#8E99A4` |
 | Outside The Walls | Teal | `#3DBBAA` |
 | Partners | Blue | `#4BBBF0` |
 
@@ -114,10 +115,10 @@ In the component settings, set `category_icon_list` (one per line, format: `slug
 ```
 start-here,compass,#3DBBAA
 course-updates,bell,#FBB050
-in-action,rocket,#E8935A
+in-action,rocket,#E8635A
 foundation,building-columns,#5BC3B6
-anything-else,comments,#8854D0
-digging-deeper,microscope,#7C5CB8
+anything-else,comments,#D4776E
+digging-deeper,microscope,#4BBBF0
 delivering-better,chalkboard-user,#E8935A
 translations,globe,#3DBBAA
 bcf-faculty,graduation-cap,#5BC3B6
