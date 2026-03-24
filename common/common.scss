@@ -210,21 +210,19 @@ a {
 }
 
 #create-topic {
-  color: var(--secondary);
-  background: var(--tertiary);
-  transition: all 0.3s linear;
+  color: var(--tertiary);
+  background: transparent;
+  transition: all 0.2s ease;
   border-radius: var(--mint-border-radius);
   text-transform: uppercase;
-  border: 2px solid var(--tertiary);
+  border: 1.5px solid var(--tertiary);
   .fa {
-    color: var(--secondary);
+    color: var(--tertiary);
   }
   &:hover {
     background: var(--tertiary);
     color: var(--secondary);
-    box-shadow: var(--mint-hover-shadow);
-    transition: all 0.3s linear;
-    border-radius: var(--mint-border-radius);
+    border: 1.5px solid var(--tertiary);
     .fa {
       color: var(--secondary);
     }
@@ -268,29 +266,30 @@ a {
   border-radius: var(--mint-border-radius);
   &:hover {
     border-radius: var(--mint-border-radius);
-    transition: all 0.3s linear;
-    background-color: transparent;
+    transition: all 0.2s ease;
+    background-color: var(--tertiary-low);
     color: var(--tertiary);
-    border: 1px dashed var(--tertiary);
+    border: 1px solid transparent;
   }
   &.active {
     border-radius: var(--mint-border-radius);
-    transition: all 0.3s linear;
-    background: var(--tertiary);
-    color: var(--secondary);
-    border: 1px solid var(--tertiary);
+    transition: all 0.2s ease;
+    background: transparent;
+    color: var(--tertiary);
+    border: 1.5px solid var(--tertiary);
+    font-weight: 600;
   }
 }
 
 .select-kit.dropdown-select-box .dropdown-select-box-header {
-  background: var(--tertiary);
+  background: transparent;
   border-radius: var(--mint-border-radius);
-  border: 1px solid var(--tertiary);
-  color: var(--secondary);
+  border: 1.5px solid var(--tertiary);
+  color: var(--tertiary);
   svg {
-    color: var(--secondary);
+    color: var(--tertiary);
     &:hover {
-      color: var(--secondary);
+      color: var(--tertiary);
     }
   }
 }
@@ -320,11 +319,11 @@ a {
 
 .discourse-no-touch .btn:not(.btn-flat):hover,
 .discourse-no-touch .btn:not(.btn-flat).btn-hover {
-  color: var(--secondary);
-  background: var(--tertiary-hover);
-  border-radius: 5px;
+  color: var(--tertiary);
+  background: var(--tertiary-low);
+  border-radius: var(--mint-border-radius);
   .fa {
-    color: var(--secondary);
+    color: var(--tertiary);
   }
 }
 
@@ -336,14 +335,21 @@ a {
 }
 
 .btn-default {
-  color: var(--secondary);
-  background: var(--tertiary);
-  transition: all 0.3s linear;
+  color: var(--tertiary);
+  background: transparent;
+  transition: all 0.2s ease;
   border-radius: var(--mint-border-radius);
   text-transform: uppercase;
-  border: 1px solid var(--tertiary);
+  border: 1.5px solid var(--tertiary);
   .fa {
+    color: var(--tertiary);
+  }
+  &:hover {
+    background: var(--tertiary);
     color: var(--secondary);
+    .fa {
+      color: var(--secondary);
+    }
   }
 }
 
