@@ -150,25 +150,22 @@ a {
         padding: 1.5em;
         position: relative;
 
-        // Category icon from category-icons component
-        .category-box-heading {
-          .badge-category__icon {
+        // Make category icon larger and sit above the name
+        .badge-category__icon {
+          .d-icon {
+            font-size: 3em;
             display: block;
-            margin-bottom: 0.5em;
-            .d-icon {
-              font-size: 3em;
-              color: var(--tertiary);
-            }
+            margin-bottom: 0.15em;
           }
         }
 
         // Lock icon for restricted categories
         .d-icon-lock {
-          font-size: 0.65em !important;
+          font-size: 0.7em !important;
           position: absolute;
           bottom: 1em;
           right: 1em;
-          opacity: 0.3;
+          opacity: 0.5;
         }
       }
       .category-logo {
