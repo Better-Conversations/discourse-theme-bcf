@@ -2,6 +2,34 @@
 
 Based on the Discourse Mint theme.
 
+## 🚀 Installation
+
+The theme must be installed from Git so that updates to this repository are automatically available in Discourse.
+
+### Installing from Git (fresh install)
+
+1. Go to **Admin > Customize > Themes & components**
+2. Click **Install** and select **From a Git repository**
+3. Enter the repo URL: `https://github.com/Better-Conversations/discourse-theme-bcf`
+4. Click **Install**
+5. Once installed, click on the theme and set it as the **active theme** for your site
+
+### Migrating from a manually pasted theme
+
+If the theme was previously created by pasting CSS directly into the admin editor:
+
+1. **Note down** any included components (e.g. Category Icons, Homepage Feature) — you'll re-add these
+2. **Note down** any theme setting overrides (colour palette selections, etc.)
+3. Install the theme from Git using the steps above
+4. Re-add the same components to the new Git-linked theme
+5. Re-apply any theme setting overrides
+6. Set the new theme as active
+7. Delete the old manually-created theme
+
+### Updating the theme
+
+Once installed from Git, go to **Admin > Customize > Themes & components > BCF-Bespoke-Theme** and click the **update** button (or enable auto-update in the theme settings to check for updates periodically).
+
 ## ⚙️ Configuration
 
 ### Discourse Settings
