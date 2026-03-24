@@ -123,14 +123,14 @@ translations,globe,#3DBBAA
 bcf-faculty,graduation-cap,#5BC3B6
 staff,shield-halved,#6C7A89
 site-feedback,lightbulb,#8E99A4
-otw,tree,#3DBBAA
+otw,person-hiking,#3DBBAA
 partners,handshake,#4BBBF0
 ```
 
 Set `svg_icons` to:
 
 ```
-compass|bell|rocket|building-columns|comments|microscope|chalkboard-user|globe|graduation-cap|shield-halved|lightbulb|tree|handshake
+compass|bell|rocket|building-columns|comments|microscope|chalkboard-user|globe|graduation-cap|shield-halved|lightbulb|person-hiking|handshake
 ```
 
 > **Note:** Verify category slugs match your actual slugs in **Admin > Categories > [category] > Settings** (or from the category URL).
