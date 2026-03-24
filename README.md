@@ -39,6 +39,15 @@ The theme includes two colour palettes defined in `about.json`:
 
 These are created automatically when the theme is installed from Git. Set them in **Admin > Customize > Themes > BCF-Bespoke-Theme** under Colour Palette / Dark Color Palette.
 
+## 🔤 Fonts
+
+The theme uses custom fonts loaded via Google Fonts:
+
+- **Headings:** Montserrat (500/600/700) — modern, geometric character
+- **Body:** Source Sans Pro (300/400/600) — chosen for readability and dyslexia-friendliness
+
+These are applied via the theme CSS. The brand guidelines specify Livvic, but Source Sans Pro was chosen for accessibility reasons.
+
 ## 📦 Required Components
 
 The theme requires two components:
@@ -69,34 +78,28 @@ Use Discourse core welcome banner functionality instead:
 
 ### Category Colours
 
-Colours follow the BCF brand system:
+Colours use the official BCF brand palette from the brand guidelines:
 
-| Colour | Hex | Used for |
-|---|---|---|
-| Teal | `#3DBBAA` / `#5BC3B6` | Foundation, brand identity |
-| Coral | `#E8635A` / `#D4776E` | Community, discussions |
-| Orange | `#FBB050` / `#E8935A` | Course-related |
-| Blue | `#4BBBF0` | Partners, exploration |
-| Purple | `#7C5CB8` | Used sparingly for accent |
-| Slate | `#6C7A89` / `#8E99A4` | Admin categories |
+**Primary:** Purple `#503F99`, Blue `#4495D1`, Teal `#54C4B6`, Red `#EF404E`
+**Secondary:** Orange `#FBB050`, Green `#A8D381`, Lavender `#BD88BE`, Sky blue `#6BCBDE`
 
 Set the **category badge colour** for each category in **Admin > Categories > [category] > Settings**:
 
 | Category | Colour | Hex |
 |---|---|---|
-| start here | Teal | `#3DBBAA` |
+| start here | Teal | `#54C4B6` |
 | course updates | Orange | `#FBB050` |
-| in action | Coral | `#E8635A` |
-| the foundation | Teal | `#5BC3B6` |
-| anything else? | Coral | `#D4776E` |
-| digging deeper | Blue | `#4BBBF0` |
-| course delivery | Orange | `#E8935A` |
-| translations | Teal | `#3DBBAA` |
-| BCF faculty | Teal | `#5BC3B6` |
-| staff | Slate | `#6C7A89` |
-| site feedback | Slate | `#8E99A4` |
-| Outside The Walls | Blue | `#4BBBF0` |
-| Partners | Blue | `#4BBBF0` |
+| in action | Red | `#EF404E` |
+| the foundation | Teal | `#54C4B6` |
+| anything else? | Lavender | `#BD88BE` |
+| digging deeper | Blue | `#4495D1` |
+| course delivery | Orange | `#FBB050` |
+| translations | Green | `#A8D381` |
+| BCF faculty | Purple | `#503F99` |
+| staff | Dark | `#333333` |
+| site feedback | Sky blue | `#6BCBDE` |
+| Outside The Walls | Sky blue | `#6BCBDE` |
+| Partners | Blue | `#4495D1` |
 
 ### Category Icons
 
@@ -113,19 +116,19 @@ Icons are managed via the [discourse-category-icons](https://github.com/discours
 In the component settings, set `category_icon_list` (one per line, format: `slug,icon,color`):
 
 ```
-start-here,compass,#3DBBAA
+start-here,compass,#54C4B6
 course-updates,bell,#FBB050
-in-action,rocket,#E8635A
-foundation,building-columns,#5BC3B6
-anything-else,comments,#D4776E
-digging-deeper,microscope,#4BBBF0
-delivering-better,chalkboard-user,#E8935A
-translations,globe,#3DBBAA
-bcf-faculty,graduation-cap,#5BC3B6
-staff,shield-halved,#6C7A89
-site-feedback,lightbulb,#8E99A4
-otw,person-hiking,#4BBBF0
-partners,handshake,#4BBBF0
+in-action,rocket,#EF404E
+foundation,building-columns,#54C4B6
+anything-else,comments,#BD88BE
+digging-deeper,microscope,#4495D1
+delivering-better,chalkboard-user,#FBB050
+translations,globe,#A8D381
+bcf-faculty,graduation-cap,#503F99
+staff,shield-halved,#333333
+site-feedback,lightbulb,#6BCBDE
+otw,person-hiking,#6BCBDE
+partners,handshake,#4495D1
 ```
 
 Set `svg_icons` to:
