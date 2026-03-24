@@ -261,18 +261,20 @@ a {
   }
 }
 
-.nav-pills li a {
-  border: 1px solid transparent;
-  border-radius: var(--mint-border-radius);
+.nav-pills > li > a {
+  border: 1px solid transparent !important;
+  border-radius: var(--mint-border-radius) !important;
+  box-shadow: none !important;
+  outline: none !important;
   transition: all 0.2s ease;
   &:hover {
-    background-color: var(--tertiary-low);
-    color: var(--tertiary);
+    background-color: var(--tertiary-low) !important;
+    color: var(--tertiary) !important;
   }
   &.active {
-    background: transparent;
-    color: var(--tertiary);
-    border: 1px solid var(--tertiary);
+    background: transparent !important;
+    color: var(--tertiary) !important;
+    border: 1px solid var(--tertiary) !important;
     font-weight: 600;
   }
 }
