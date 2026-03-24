@@ -20,6 +20,20 @@
   border-radius: 10px;
 }
 
+// Hide background decorations on featured cards component
+.above-main-container-outlet.featured-cards::before,
+.above-main-container-outlet.featured-cards::after {
+  display: none;
+}
+
+.homepage-feature-topic .homepage-feature-topic-image {
+  height: 300px;
+}
+
+.homepage-feature-topic-wrapper h2 {
+  text-align: left;
+}
+
 .custom-homepage-columns {
   margin: 2em 0 2em 0;
   padding: 0;
@@ -536,6 +550,11 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
         
       }
       
+      a:has(.avatar.latest.single) {
+        right: 5px;
+        top: 5px;
+      }
+
       a:not(:first-of-type) {
         margin-left: -10px;
         width: 30px;
