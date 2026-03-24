@@ -37,15 +37,15 @@ In the component settings, set `category_icon_list` (one per line, format: `slug
 start-here,compass,#EF404E
 course-updates,bell,#EF404E
 in-action,rocket,#8854D0
-the-foundation,building-columns,#503F99
+foundation,building-columns,#503F99
 anything-else,comments,#FBB050
 digging-deeper,microscope,#4BBBF0
-course-delivery,chalkboard-user,#EF404E
+delivering-better,chalkboard-user,#EF404E
 translations,globe,#A8D381
 bcf-faculty,graduation-cap,#EF404E
 staff,shield-halved,#EF404E
 site-feedback,lightbulb,#454545
-outside-the-walls,door-open,#4BBBF0
+otw,door-open,#4BBBF0
 partners,handshake,#503F99
 ```
 
