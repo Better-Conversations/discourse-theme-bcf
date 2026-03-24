@@ -143,23 +143,15 @@ a {
     border-radius: var(--mint-border-radius);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-    position: relative;
-
-    // Move lock icon to bottom-right corner of card
-    .badge-category .d-icon-lock {
-      position: absolute;
-      bottom: 0.6em;
-      right: 0.6em;
-      font-size: 0.75em;
-      opacity: 0.4;
-      color: var(--primary);
-    }
-
     .category-box-inner {
       border: none;
       padding: 0;
       .category-details {
         padding: 1.5em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         // Make category icon larger and sit above the name
         .badge-category__icon {
@@ -169,6 +161,15 @@ a {
             margin-bottom: 0.15em;
           }
         }
+
+        // Lock icon: small, inline after category name
+        .d-icon-lock {
+          font-size: 0.6em;
+          opacity: 0.45;
+          margin-left: 0.3em;
+          vertical-align: middle;
+        }
+      }
       }
       .category-logo {
         margin-top: 1em;
