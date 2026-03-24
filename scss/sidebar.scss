@@ -7,10 +7,9 @@
 #main-outlet-wrapper {
   .sidebar-wrapper {
     background-color: var(--primary-very-low);
-    box-shadow: 0 8px 60px 0 rgba(103, 151, 255, 0.1),
-      0 12px 90px 0 rgba(133, 255, 103, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
     margin-top: 1em;
-    border-top: 8px solid var(--tertiary);
+    border-top: 4px solid var(--tertiary);
     border-radius: var(--mint-border-radius);
     height: calc(
       var(--composer-vh, var(--1dvh)) * 100 - var(--header-offset, 0px) - 3em
