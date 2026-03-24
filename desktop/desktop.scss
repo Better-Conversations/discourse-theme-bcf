@@ -1,6 +1,6 @@
 @import "variables";
 
-// Consistent padding across all pages
+// Match right margin to the gap the sidebar creates on the left
 #main-outlet {
-  padding: 1.5em;
+  padding-right: 2em;
 }
