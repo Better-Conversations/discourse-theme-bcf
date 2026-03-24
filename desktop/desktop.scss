@@ -18,3 +18,18 @@ body:not(.navigation-categories):not(.navigation-topics) #main-outlet {
 
 
 // Background gradient blobs removed for cleaner look
+
+// Narrow sidebar, give more space to content
+#main-outlet-wrapper {
+  .sidebar-wrapper {
+    width: 180px;
+    .sidebar-container {
+      width: 180px;
+    }
+  }
+}
+
+// Add right padding to main content area
+#main-outlet {
+  padding-right: 1.5em;
+}
