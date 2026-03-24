@@ -261,8 +261,10 @@ a {
   }
 }
 
-.nav-pills > li > a {
-  border: 1px solid transparent !important;
+.nav-pills > li > a,
+.nav-pills > li > a:active,
+.nav-pills > li > a:focus {
+  border: none !important;
   border-radius: var(--mint-border-radius) !important;
   box-shadow: none !important;
   outline: none !important;
@@ -272,10 +274,11 @@ a {
     color: var(--tertiary) !important;
   }
   &.active {
-    background: transparent !important;
+    background: var(--tertiary-low) !important;
     color: var(--tertiary) !important;
-    border: 1px solid var(--tertiary) !important;
     font-weight: 600;
+    border: none !important;
+    box-shadow: none !important;
   }
 }
 
