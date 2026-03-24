@@ -95,7 +95,7 @@ Set the **category badge colour** for each category in **Admin > Categories > [c
 | BCF faculty | Teal | `#5BC3B6` |
 | staff | Slate | `#6C7A89` |
 | site feedback | Slate | `#8E99A4` |
-| Outside The Walls | Teal | `#3DBBAA` |
+| Outside The Walls | Blue | `#4BBBF0` |
 | Partners | Blue | `#4BBBF0` |
 
 ### Category Icons
@@ -124,7 +124,7 @@ translations,globe,#3DBBAA
 bcf-faculty,graduation-cap,#5BC3B6
 staff,shield-halved,#6C7A89
 site-feedback,lightbulb,#8E99A4
-otw,person-hiking,#3DBBAA
+otw,person-hiking,#4BBBF0
 partners,handshake,#4BBBF0
 ```
 
