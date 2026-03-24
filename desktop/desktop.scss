@@ -1,25 +1,6 @@
 @import "variables";
 
-body:not(.navigation-categories):not(.navigation-topics) #main-outlet {
-  border-radius: var(--mint-border-radius);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
-  padding: 2em;
-  @include mint-card-bg;
-  border-top: 4px solid var(--tertiary);
-  margin-top: 1em;
-}
-
-.boxed {
-  &.white {
-    @include mint-card-bg;
-  }
-}
-
-
-
-// Background gradient blobs removed for cleaner look
-
-// Even out content spacing — sidebar already provides left gap
+// Consistent padding across all pages
 #main-outlet {
-  padding-right: 1.5em;
+  padding: 1.5em;
 }
