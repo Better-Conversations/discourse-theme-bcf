@@ -162,12 +162,20 @@ a {
           }
         }
 
-        // Lock icon: inline after category name
+        // Flex the heading so we can reorder lock to after the name
+        .category-box-heading h3 {
+          display: inline-flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        // Lock icon: move to after category name
         .d-icon-lock {
           font-size: 0.8em;
           color: var(--primary-medium);
           margin-left: 0.25em;
-          vertical-align: middle;
+          order: 99;
         }
       }
       .category-logo {
