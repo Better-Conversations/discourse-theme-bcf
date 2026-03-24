@@ -81,7 +81,9 @@ Use Discourse core welcome banner functionality instead:
 Colours use the official BCF brand palette from the brand guidelines:
 
 **Primary:** Purple `#503F99`, Blue `#4495D1`, Teal `#54C4B6`, Red `#EF404E`
-**Secondary:** Orange `#FBB050`, Green `#A8D381`, Lavender `#BD88BE`, Sky blue `#6BCBDE`
+**Secondary:** Orange `#FBB050`, Green `#A8D381`, Coral `#E8635A`, Sky blue `#6BCBDE`
+
+> **Note:** Coral replaces Lavender (#BD88BE) from the original brand guidelines.
 
 Set the **category badge colour** for each category in **Admin > Categories > [category] > Settings**:
 
@@ -91,13 +93,13 @@ Set the **category badge colour** for each category in **Admin > Categories > [c
 | course updates | Orange | `#FBB050` |
 | in action | Red | `#EF404E` |
 | the foundation | Teal | `#54C4B6` |
-| anything else? | Lavender | `#BD88BE` |
+| anything else? | Coral | `#E8635A` |
 | digging deeper | Blue | `#4495D1` |
 | course delivery | Orange | `#FBB050` |
 | translations | Green | `#A8D381` |
 | BCF faculty | Purple | `#503F99` |
 | staff | Dark | `#333333` |
-| site feedback | Sky blue | `#6BCBDE` |
+| site feedback | Grey | `#8E99A4` |
 | Outside The Walls | Sky blue | `#6BCBDE` |
 | Partners | Blue | `#4495D1` |
 
@@ -120,13 +122,13 @@ start-here,compass,#54C4B6
 course-updates,bell,#FBB050
 in-action,rocket,#EF404E
 foundation,building-columns,#54C4B6
-anything-else,comments,#BD88BE
+anything-else,comments,#E8635A
 digging-deeper,microscope,#4495D1
 delivering-better,chalkboard-user,#FBB050
 translations,globe,#A8D381
 bcf-faculty,graduation-cap,#503F99
 staff,shield-halved,#333333
-site-feedback,lightbulb,#6BCBDE
+site-feedback,lightbulb,#8E99A4
 otw,person-hiking,#6BCBDE
 partners,handshake,#4495D1
 ```
