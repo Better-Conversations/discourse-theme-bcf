@@ -19,24 +19,41 @@ Use Discourse core welcome banner functionality instead:
 - Configure your banner from the admin interface using the current Discourse "welcome banner" feature.
 - If the old search banner component is still installed on your site, remove it from your active theme/component list.
 
-### Recommended Category Icons
+### Category Icons
 
-Set these in **Admin > Categories > [category] > Settings > Category Icon**.
-Use the Font Awesome icon name (without `fa-` prefix).
+Icons are managed via the [discourse-category-icons](https://github.com/discourse/discourse-category-icons) theme component.
 
-| Category | Icon | FA Name |
-|---|---|---|
-| start here | Compass | `compass` |
-| course updates | Bell | `bell` |
-| in action | Rocket | `rocket` |
-| the foundation | Pillars | `building-columns` |
-| anything else? | Chat bubbles | `comments` |
-| digging deeper | Microscope | `microscope` |
-| course delivery | Chalkboard | `chalkboard-user` |
-| translations | Globe | `globe` |
-| BCF faculty | Graduation cap | `graduation-cap` |
-| staff | Shield | `shield-halved` |
-| site feedback | Lightbulb | `lightbulb` |
-| Outside The Walls | Open door | `door-open` |
-| Partners | Handshake | `handshake` |
+**Installation:**
+
+1. Go to **Admin > Customize > Components > Install**
+2. Add the Git URL: `https://github.com/discourse/discourse-category-icons`
+3. Add the component to the BCF-Bespoke-Theme
+
+**Configuration:**
+
+In the component settings, set `category_icon_list` (one per line, format: `slug,icon,color`):
+
+```
+start-here,compass,#EF404E
+course-updates,bell,#EF404E
+in-action,rocket,#8854D0
+the-foundation,building-columns,#503F99
+anything-else,comments,#FBB050
+digging-deeper,microscope,#4BBBF0
+course-delivery,chalkboard-user,#EF404E
+translations,globe,#A8D381
+bcf-faculty,graduation-cap,#EF404E
+staff,shield-halved,#EF404E
+site-feedback,lightbulb,#454545
+outside-the-walls,door-open,#4BBBF0
+partners,handshake,#503F99
+```
+
+Set `svg_icons` to:
+
+```
+compass|bell|rocket|building-columns|comments|microscope|chalkboard-user|globe|graduation-cap|shield-halved|lightbulb|door-open|handshake
+```
+
+> **Note:** Verify category slugs match your actual slugs in **Admin > Categories > [category] > Settings** (or from the category URL).
 
