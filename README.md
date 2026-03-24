@@ -67,6 +67,36 @@ Use Discourse core welcome banner functionality instead:
 - Configure your banner from the admin interface using the current Discourse "welcome banner" feature.
 - If the old search banner component is still installed on your site, remove it from your active theme/component list.
 
+### Category Colours
+
+Colours follow the BCF brand system:
+
+| Colour | Hex | Used for |
+|---|---|---|
+| Teal | `#3DBBAA` / `#5BC3B6` | Foundation, brand identity |
+| Purple | `#8854D0` / `#7C5CB8` | Online discussions, community |
+| Orange | `#FBB050` / `#E8935A` | Course-related |
+| Blue | `#4BBBF0` | Partners |
+| Slate | `#6C7A89` / `#8E99A4` | Admin categories |
+
+Set the **category badge colour** for each category in **Admin > Categories > [category] > Settings**:
+
+| Category | Colour | Hex |
+|---|---|---|
+| start here | Teal | `#3DBBAA` |
+| course updates | Orange | `#FBB050` |
+| in action | Warm orange | `#E8935A` |
+| the foundation | Teal | `#5BC3B6` |
+| anything else? | Purple | `#8854D0` |
+| digging deeper | Light purple | `#7C5CB8` |
+| course delivery | Warm orange | `#E8935A` |
+| translations | Teal | `#3DBBAA` |
+| BCF faculty | Teal | `#5BC3B6` |
+| staff | Slate | `#6C7A89` |
+| site feedback | Light slate | `#8E99A4` |
+| Outside The Walls | Teal | `#3DBBAA` |
+| Partners | Blue | `#4BBBF0` |
+
 ### Category Icons
 
 Icons are managed via the [discourse-category-icons](https://github.com/discourse/discourse-category-icons) theme component.
@@ -82,19 +112,19 @@ Icons are managed via the [discourse-category-icons](https://github.com/discours
 In the component settings, set `category_icon_list` (one per line, format: `slug,icon,color`):
 
 ```
-start-here,compass,#EF404E
-course-updates,bell,#EF404E
-in-action,rocket,#8854D0
-foundation,building-columns,#503F99
-anything-else,comments,#FBB050
-digging-deeper,microscope,#4BBBF0
-delivering-better,chalkboard-user,#EF404E
-translations,globe,#A8D381
-bcf-faculty,graduation-cap,#EF404E
-staff,shield-halved,#EF404E
-site-feedback,lightbulb,#454545
-otw,tree,#4BBBF0
-partners,handshake,#503F99
+start-here,compass,#3DBBAA
+course-updates,bell,#FBB050
+in-action,rocket,#E8935A
+foundation,building-columns,#5BC3B6
+anything-else,comments,#8854D0
+digging-deeper,microscope,#7C5CB8
+delivering-better,chalkboard-user,#E8935A
+translations,globe,#3DBBAA
+bcf-faculty,graduation-cap,#5BC3B6
+staff,shield-halved,#6C7A89
+site-feedback,lightbulb,#8E99A4
+otw,tree,#3DBBAA
+partners,handshake,#4BBBF0
 ```
 
 Set `svg_icons` to:
