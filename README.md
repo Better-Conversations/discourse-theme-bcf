@@ -92,7 +92,7 @@ Set the **category badge colour** for each category in **Admin > Categories > [c
 | start here | Teal | `#54C4B6` |
 | course updates | Orange | `#FBB050` |
 | in action | Red | `#EF404E` |
-| the foundation | Teal | `#54C4B6` |
+| the foundation | Dark teal | `#2E8B82` |
 | anything else? | Coral | `#E8635A` |
 | digging deeper | Blue | `#4495D1` |
 | course delivery | Orange | `#FBB050` |
@@ -121,7 +121,7 @@ In the component settings, set `category_icon_list` (one per line, format: `slug
 start-here,compass,#54C4B6
 course-updates,bell,#FBB050
 in-action,rocket,#EF404E
-foundation,building-columns,#54C4B6
+foundation,building-columns,#2E8B82
 anything-else,comments,#E8635A
 digging-deeper,microscope,#4495D1
 delivering-better,chalkboard-user,#FBB050
