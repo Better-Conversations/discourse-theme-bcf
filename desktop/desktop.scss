@@ -19,8 +19,7 @@ body:not(.navigation-categories):not(.navigation-topics) #main-outlet {
 
 // Background gradient blobs removed for cleaner look
 
-// Balanced padding on main content area
+// Even out content spacing — sidebar already provides left gap
 #main-outlet {
-  padding-left: 1.5em;
   padding-right: 1.5em;
 }
