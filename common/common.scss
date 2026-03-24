@@ -215,14 +215,14 @@ a {
   transition: all 0.2s ease;
   border-radius: var(--mint-border-radius);
   text-transform: uppercase;
-  border: 1.5px solid var(--tertiary);
+  border: 1px solid var(--tertiary);
   .fa {
     color: var(--tertiary);
   }
   &:hover {
     background: var(--tertiary);
     color: var(--secondary);
-    border: 1.5px solid var(--tertiary);
+    border: 1px solid var(--tertiary);
     .fa {
       color: var(--secondary);
     }
@@ -264,19 +264,15 @@ a {
 .nav-pills li a {
   border: 1px solid transparent;
   border-radius: var(--mint-border-radius);
+  transition: all 0.2s ease;
   &:hover {
-    border-radius: var(--mint-border-radius);
-    transition: all 0.2s ease;
     background-color: var(--tertiary-low);
     color: var(--tertiary);
-    border: 1px solid transparent;
   }
   &.active {
-    border-radius: var(--mint-border-radius);
-    transition: all 0.2s ease;
     background: transparent;
     color: var(--tertiary);
-    border: 1.5px solid var(--tertiary);
+    border: 1px solid var(--tertiary);
     font-weight: 600;
   }
 }
@@ -284,7 +280,7 @@ a {
 .select-kit.dropdown-select-box .dropdown-select-box-header {
   background: transparent;
   border-radius: var(--mint-border-radius);
-  border: 1.5px solid var(--tertiary);
+  border: 1px solid var(--tertiary);
   color: var(--tertiary);
   svg {
     color: var(--tertiary);
@@ -314,7 +310,12 @@ a {
 
 .discourse-no-touch .btn:hover .d-icon,
 .discourse-no-touch .btn.btn-hover .d-icon {
-  color: var(--tertiary-hover);
+  color: var(--tertiary);
+}
+
+// Consistent icon sizing in buttons
+.btn .d-icon {
+  font-size: 0.9em;
 }
 
 .discourse-no-touch .btn:not(.btn-flat):hover,
@@ -340,7 +341,7 @@ a {
   transition: all 0.2s ease;
   border-radius: var(--mint-border-radius);
   text-transform: uppercase;
-  border: 1.5px solid var(--tertiary);
+  border: 1px solid var(--tertiary);
   .fa {
     color: var(--tertiary);
   }
