@@ -145,13 +145,22 @@ a {
     transition: box-shadow 0.2s ease, transform 0.2s ease;
     position: relative;
 
-    // Lock icon for restricted categories — bottom-right of card
-    .d-icon-lock {
-      font-size: 0.7em !important;
+    // Hide the inline lock icon next to category name
+    .badge-category .d-icon-lock {
+      display: none;
+    }
+
+    // Recreate lock in bottom-right corner of card via pseudo-element
+    &:has(.d-icon-lock)::after {
+      content: "\f023"; // Font Awesome lock
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
       position: absolute;
-      bottom: 0.75em;
-      right: 0.75em;
-      opacity: 0.5;
+      bottom: 0.6em;
+      right: 0.6em;
+      font-size: 0.8em;
+      opacity: 0.35;
+      color: var(--primary);
     }
 
     .category-box-inner {
