@@ -30,6 +30,26 @@ If the theme was previously created by pasting CSS directly into the admin edito
 
 Once installed from Git, go to **Admin > Customize > Themes & components > BCF-Bespoke-Theme** and click the **update** button (or enable auto-update in the theme settings to check for updates periodically).
 
+## 🎨 Colour Palettes
+
+The theme includes two colour palettes defined in `about.json`:
+
+- **BCF-light** — white background, purple (#503F99) tertiary, orange (#FBB050) quaternary
+- **BCF-dark** — dark background (#2d2d2d), lighter purple (#8b5ca2) tertiary
+
+These are created automatically when the theme is installed from Git. Set them in **Admin > Customize > Themes > BCF-Bespoke-Theme** under Colour Palette / Dark Color Palette.
+
+## 📦 Required Components
+
+The theme requires two components:
+
+1. **Homepage Feature** — `https://github.com/nolosb/discourse-featured-cards`
+   (listed in `about.json`, may auto-install)
+2. **Category Icons** — `https://github.com/discourse/discourse-category-icons`
+   (see configuration below)
+
+Add both via **Admin > Customize > Components > Install** and attach them to the BCF-Bespoke-Theme.
+
 ## ⚙️ Configuration
 
 ### Discourse Settings
