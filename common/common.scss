@@ -156,17 +156,17 @@ a {
         // Make category icon larger and sit above the name
         .badge-category__icon {
           .d-icon {
-            font-size: 3em;
+            font-size: 2em;
             display: block;
             margin-bottom: 0.15em;
           }
         }
 
-        // Lock icon: small, inline after category name
+        // Lock icon: inline after category name
         .d-icon-lock {
-          font-size: 0.6em;
-          opacity: 0.45;
-          margin-left: 0.3em;
+          font-size: 0.8em;
+          color: var(--primary-medium);
+          margin-left: 0.25em;
           vertical-align: middle;
         }
       }
