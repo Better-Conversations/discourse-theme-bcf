@@ -1,25 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
-
 @import "variables";
 @import "sidebar";
 @import "chat";
 
-html {
-  --heading-font-family: 'Montserrat', sans-serif;
-  --font-family: 'Source Sans Pro', sans-serif;
-}
-
-body {
-  font-family: var(--font-family);
-}
-
-h1, h2, h3, h4, h5, h6,
-.topic-title h1,
-.category-name,
-.d-header .title a {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-}
+// Fonts are set in Admin > Appearance > Fonts:
+//   Base font: Open Sans
+//   Heading font: Lato
 
 .d-editor-textarea-wrapper,
 .select-kit-header {

@@ -41,12 +41,12 @@ These are created automatically when the theme is installed from Git. Set them i
 
 ## 🔤 Fonts
 
-The theme uses custom fonts loaded via Google Fonts:
+Set in **Admin > Appearance > Fonts**:
 
-- **Headings:** Montserrat (500/600/700) — modern, geometric character
-- **Body:** Source Sans Pro (300/400/600) — chosen for readability and dyslexia-friendliness
+- **Base font:** Open Sans
+- **Heading font:** Lato
 
-These are applied via the theme CSS. The brand guidelines specify Livvic, but Source Sans Pro was chosen for accessibility reasons.
+Both are dyslexia-friendly with clear letter differentiation. The brand guidelines specify Livvic, but these were chosen for accessibility. No custom CSS needed — Discourse loads them natively.
 
 ## 📦 Required Components
 
