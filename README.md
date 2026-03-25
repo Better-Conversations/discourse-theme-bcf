@@ -30,6 +30,39 @@ If the theme was previously created by pasting CSS directly into the admin edito
 
 Once installed from Git, go to **Admin > Customize > Themes & components > BCF-Bespoke-Theme** and click the **update** button (or enable auto-update in the theme settings to check for updates periodically).
 
+## 🛠️ Local Development
+
+Use the `discourse_theme` CLI to live-sync local changes to your Discourse instance without committing to Git.
+
+### Setup
+
+```bash
+gem install discourse_theme
+```
+
+### Usage
+
+```bash
+discourse_theme watch .
+```
+
+On first run, it will prompt for:
+- **Discourse URL** — e.g. `https://community.betterconversations.foundation`
+- **API key** — create one at **Admin > API > Keys** (scoped to your admin user, with global scope)
+
+These are saved for subsequent runs. After setup, every file save is instantly uploaded to Discourse — no commit/push/update cycle needed.
+
+### Tips
+
+- Keep a browser tab open on your Discourse site to see changes in real time
+- Use `Ctrl+C` to stop watching
+- If you need to reset the saved credentials: `discourse_theme config`
+- The CLI only syncs the theme files — component settings (Category Icons config, etc.) still need to be changed in the admin UI
+
+### When to commit
+
+Use the CLI for iterative development, then commit once you're happy with the result. This avoids cluttering the Git history with trial-and-error commits.
+
 ## 🎨 Colour Palettes
 
 The theme includes two colour palettes defined in `about.json`:
