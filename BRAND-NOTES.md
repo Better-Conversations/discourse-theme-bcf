@@ -94,6 +94,37 @@ These principles emerged during the Discourse community platform redesign:
 4. **Consistent weight** - buttons, borders, and icons should feel balanced
 5. **Brand colours for meaning** - each colour maps to a purpose (teal=foundation, orange=course, purple=authority, etc.)
 
+## Technical Design Standards
+
+Established during theme implementation — these should be codified in the brand guidelines.
+
+### Shadows
+- **Standard:** neutral `rgba(0, 0, 0, ...)` only — never colour-tinted
+- **Card shadow:** `0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06)`
+- **Hover shadow:** `0 4px 20px rgba(0, 0, 0, 0.08)`
+- **Light shadow (topic items):** `0 1px 2px rgba(0, 0, 0, 0.05)`
+
+### Border Radius
+- **Standard radius:** 10px (`--mint-border-radius` CSS variable)
+- Applied consistently to all cards, buttons, inputs, modals, pills
+
+### Buttons
+- **Default style:** outlined — transparent background, 1px border in accent colour
+- **Hover:** fills solid with accent colour
+- **Active nav pills:** solid dark background (`var(--primary)`)
+
+### Responsive Breakpoints
+- **960px:** Tablet — 2-column category grid
+- **768px:** Phone landscape — single column, simplified topic list
+- **480px:** Phone portrait — tighter spacing, shorter header
+
+### Dark Mode Rules
+- Use CSS custom properties (`var(--primary)`, `var(--secondary)`, etc.) — never hardcode colours
+- Never use `prefers-color-scheme` media query — use Discourse's theme switcher mechanism
+- Border opacity should be 0.12-0.15 (not 0.08-0.1) for dark background visibility
+- Shadow opacity should be 0.05-0.06 minimum for dark background visibility
+- `var(--header_background)` works correctly in both modes (light: #ffffff, dark: #202020)
+
 ## TODO for Brand Repo
 
 - [ ] Create `Better-Conversations/brand` repository
