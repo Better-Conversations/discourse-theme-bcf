@@ -1,6 +1,7 @@
 @import "variables";
 
-// Match right margin to the gap the sidebar creates on the left
+// Balance content padding — sidebar provides left gap, match on right
 #main-outlet {
-  padding-right: 2em;
+  padding-left: 1em;
+  padding-right: 1.5em;
 }
