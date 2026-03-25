@@ -54,7 +54,7 @@
     @include mint-card-bg;
     padding: 2em 2em 1em;
     border-top: 4px solid var(--tertiary);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
     .header-wrapper {
       background-color: transparent;
       a h2 {
@@ -109,7 +109,7 @@
 .navigation-topics {
   .container.list-container {
     border-radius: var(--mint-border-radius);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
     padding: 2em;
     @include mint-card-bg;
     border-top: 4px solid var(--tertiary);
@@ -148,7 +148,7 @@ a {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    border: 1px solid rgba(var(--primary-rgb), 0.08);
+    border: 1px solid rgba(var(--primary-rgb), 0.12);
     border-left: 4px solid var(--category-badge-color);
     background: var(--secondary);
     border-radius: var(--mint-border-radius);
@@ -515,11 +515,11 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
       display: flex;
       margin-bottom: 0.5em;
       background-color: var(--secondary);
-      border: 1px solid rgba(var(--primary-rgb), 0.1);
+      border: 1px solid rgba(var(--primary-rgb), 0.15);
       border-radius: var(--mint-border-radius);
       position: relative;
       transition: box-shadow 0.2s ease, border-color 0.2s ease;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       &.visited {
         border: 1px solid rgba(var(--primary-rgb), 0.1);
