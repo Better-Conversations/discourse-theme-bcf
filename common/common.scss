@@ -21,7 +21,7 @@
 }
 
 .alert.alert-info {
-  border-radius: 10px;
+  border-radius: var(--mint-border-radius);
 }
 
 // Hide background decorations on featured cards component
@@ -36,6 +36,15 @@
 
 .homepage-feature-topic-wrapper h2 {
   text-align: left;
+  a,
+  a:visited {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--primary) !important;
+  }
 }
 
 .custom-homepage-columns {
@@ -47,7 +56,7 @@
     @include mint-card-bg;
     padding: 2em 2em 1em;
     border-top: 4px solid var(--tertiary);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
     .header-wrapper {
       background-color: transparent;
       a h2 {
@@ -102,7 +111,7 @@
 .navigation-topics {
   .container.list-container {
     border-radius: var(--mint-border-radius);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
     padding: 2em;
     @include mint-card-bg;
     border-top: 4px solid var(--tertiary);
@@ -128,9 +137,7 @@
   color: var(--primary);
 }
 
-a {
-  color: var(--tertiary-hover);
-}
+// Removed global a { color } override — was too aggressive, let Discourse handle link colours
 
 .category-boxes {
   display: grid;
@@ -141,7 +148,7 @@ a {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    border: 1px solid rgba(var(--primary-rgb), 0.08);
+    border: 1px solid rgba(var(--primary-rgb), 0.12);
     border-left: 4px solid var(--category-badge-color);
     background: var(--secondary);
     border-radius: var(--mint-border-radius);
@@ -265,38 +272,29 @@ a {
   }
 }
 
-.nav-pills > li > a,
-.nav-pills > li > a:active,
-.nav-pills > li > a:focus {
-  border: none !important;
-  border-radius: var(--mint-border-radius) !important;
-  box-shadow: none !important;
-  outline: none !important;
-  transition: all 0.2s ease;
-  color: var(--primary-medium) !important;
-  background: transparent !important;
-  &:hover {
-    background-color: var(--primary-very-low) !important;
-    color: var(--primary) !important;
-  }
-  &.active {
-    background: var(--primary) !important;
-    color: var(--secondary) !important;
-    font-weight: 500;
-  }
+// Nav pills — override Discourse's own CSS variables for clean styling
+:root {
+  --d-nav-pill-border-radius: var(--mint-border-radius);
+  --d-nav-color: var(--primary-medium);
+  --d-nav-color-hover: var(--primary);
+  --d-nav-bg-color-hover: var(--primary-very-low);
+  --d-nav-color-active: var(--secondary);
+  --d-nav-bg-color-active: var(--primary);
 }
 
+// Remove any borders/outlines that Discourse adds on top
+.nav-pills > li > a,
+.nav-pills > li > a.active,
+.nav-pills > li button,
+.nav-pills > li button.active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+// Only apply border-radius to dropdown headers — no colour overrides
 .select-kit.dropdown-select-box .dropdown-select-box-header {
-  background: transparent;
   border-radius: var(--mint-border-radius);
-  border: 1px solid var(--tertiary);
-  color: var(--tertiary);
-  svg {
-    color: var(--tertiary);
-    &:hover {
-      color: var(--tertiary);
-    }
-  }
 }
 
 .d-editor-button-bar
@@ -313,28 +311,21 @@ a {
     color: var(--secondary);
     background: var(--tertiary-hover);
     border: 1px solid var(--tertiary-hover);
-    border-radius: 5px;
+    border-radius: var(--mint-border-radius);
   }
 }
 
-.discourse-no-touch .btn:hover .d-icon,
-.discourse-no-touch .btn.btn-hover .d-icon {
-  color: var(--tertiary);
-}
+// Removed — let Discourse handle icon hover colours
 
 // Consistent icon sizing in buttons
 .btn .d-icon {
   font-size: 0.9em;
 }
 
+// Only add border-radius on button hover — let Discourse handle colours
 .discourse-no-touch .btn:not(.btn-flat):hover,
 .discourse-no-touch .btn:not(.btn-flat).btn-hover {
-  color: var(--tertiary);
-  background: var(--tertiary-low);
   border-radius: var(--mint-border-radius);
-  .fa {
-    color: var(--tertiary);
-  }
 }
 
 .menu-panel .widget-link:hover,
@@ -344,23 +335,9 @@ a {
   background-color: var(--tertiary-low);
 }
 
+// Only apply border-radius to btn-default globally — no colour overrides
 .btn-default {
-  color: var(--tertiary);
-  background: transparent;
-  transition: all 0.2s ease;
   border-radius: var(--mint-border-radius);
-  text-transform: uppercase;
-  border: 1px solid var(--tertiary);
-  .fa {
-    color: var(--tertiary);
-  }
-  &:hover {
-    background: var(--tertiary);
-    color: var(--secondary);
-    .fa {
-      color: var(--secondary);
-    }
-  }
 }
 
 .btn-primary {
@@ -390,16 +367,9 @@ a {
   background-color: var(--tertiary-low);
 }
 
-a:hover {
-  color: var(--tertiary-hover);
-}
+// Removed global a:hover colour override
 
-.image-upload-controls .btn-default {
-  border: 1px solid var(--secondary);
-  .fa {
-    color: var(--secondary);
-  }
-}
+// Removed — was setting white border/icon on white background
 
 .admin-controls,
 .email-template,
@@ -427,9 +397,7 @@ a:hover {
   color: var(--primary-very-low);
 }
 
-.btn[href] {
-  color: var(--secondary);
-}
+// Removed .btn[href] { color: var(--secondary) } — was making link-buttons invisible
 
 summary.select-kit-header.single-select-header.dropdown-select-box-header {
   padding: 0.5em;
@@ -508,11 +476,11 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
       display: flex;
       margin-bottom: 0.5em;
       background-color: var(--secondary);
-      border: 1px solid rgba(var(--primary-rgb), 0.1);
+      border: 1px solid rgba(var(--primary-rgb), 0.15);
       border-radius: var(--mint-border-radius);
       position: relative;
       transition: box-shadow 0.2s ease, border-color 0.2s ease;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       &.visited {
         border: 1px solid rgba(var(--primary-rgb), 0.1);
@@ -610,4 +578,54 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
 .topic-list-data.num.views {
   display: none;
 }
+}
+
+// === RESPONSIVE BREAKPOINTS ===
+
+// Tablet: 2-column category grid
+@media (max-width: 960px) {
+  .category-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+
+// Phone landscape / small tablet: single column, simplified topic list
+@media (max-width: 768px) {
+  .category-boxes {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .latest-topics-snippet .topic-list .topic-list-body .topic-list-item {
+    flex-wrap: wrap;
+    .topic-list-data.main-link {
+      width: 100%;
+      order: 1;
+    }
+    .topic-list-data.posters {
+      width: auto;
+      order: 2;
+    }
+    .topic-list-data.posts,
+    .topic-list-data.age {
+      width: auto;
+      order: 3;
+    }
+  }
+
+  .navigation-topics .container.list-container {
+    padding: 1em;
+  }
+}
+
+// Phone portrait: tighter spacing
+@media (max-width: 480px) {
+  .category-boxes .category-box .category-box-inner .category-details {
+    padding: 1em;
+  }
+
+  .d-header {
+    height: 4em;
+  }
 }

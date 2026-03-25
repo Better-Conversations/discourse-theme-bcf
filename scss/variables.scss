@@ -1,9 +1,7 @@
+// Uses --header_background which is set correctly in both colour schemes:
+// BCF-light: #ffffff, BCF-dark: #202020 (defined in about.json)
 @mixin mint-card-bg {
-  background: var(--primary-very-low);
-
-  @media (prefers-color-scheme: light) {
-    background: var(--header_background);
-  }
+  background: var(--header_background);
 }
 
 :root {
