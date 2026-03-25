@@ -21,7 +21,7 @@
 }
 
 .alert.alert-info {
-  border-radius: 10px;
+  border-radius: var(--mint-border-radius);
 }
 
 // Hide background decorations on featured cards component
@@ -36,12 +36,14 @@
 
 .homepage-feature-topic-wrapper h2 {
   text-align: left;
-  a {
+  a,
+  a:visited {
     white-space: normal;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    color: var(--primary) !important;
   }
 }
 
@@ -135,9 +137,7 @@
   color: var(--primary);
 }
 
-a {
-  color: var(--tertiary-hover);
-}
+// Removed global a { color } override — was too aggressive, let Discourse handle link colours
 
 .category-boxes {
   display: grid;
@@ -272,38 +272,29 @@ a {
   }
 }
 
-.nav-pills > li > a,
-.nav-pills > li > a:active,
-.nav-pills > li > a:focus {
-  border: none !important;
-  border-radius: var(--mint-border-radius) !important;
-  box-shadow: none !important;
-  outline: none !important;
-  transition: all 0.2s ease;
-  color: var(--primary-medium) !important;
-  background: transparent !important;
-  &:hover {
-    background-color: var(--primary-very-low) !important;
-    color: var(--primary) !important;
-  }
-  &.active {
-    background: var(--primary) !important;
-    color: var(--secondary) !important;
-    font-weight: 500;
-  }
+// Nav pills — override Discourse's own CSS variables for clean styling
+:root {
+  --d-nav-pill-border-radius: var(--mint-border-radius);
+  --d-nav-color: var(--primary-medium);
+  --d-nav-color-hover: var(--primary);
+  --d-nav-bg-color-hover: var(--primary-very-low);
+  --d-nav-color-active: var(--secondary);
+  --d-nav-bg-color-active: var(--primary);
 }
 
+// Remove any borders/outlines that Discourse adds on top
+.nav-pills > li > a,
+.nav-pills > li > a.active,
+.nav-pills > li button,
+.nav-pills > li button.active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+// Only apply border-radius to dropdown headers — no colour overrides
 .select-kit.dropdown-select-box .dropdown-select-box-header {
-  background: transparent;
   border-radius: var(--mint-border-radius);
-  border: 1px solid var(--tertiary);
-  color: var(--tertiary);
-  svg {
-    color: var(--tertiary);
-    &:hover {
-      color: var(--tertiary);
-    }
-  }
 }
 
 .d-editor-button-bar
@@ -320,28 +311,21 @@ a {
     color: var(--secondary);
     background: var(--tertiary-hover);
     border: 1px solid var(--tertiary-hover);
-    border-radius: 5px;
+    border-radius: var(--mint-border-radius);
   }
 }
 
-.discourse-no-touch .btn:hover .d-icon,
-.discourse-no-touch .btn.btn-hover .d-icon {
-  color: var(--tertiary);
-}
+// Removed — let Discourse handle icon hover colours
 
 // Consistent icon sizing in buttons
 .btn .d-icon {
   font-size: 0.9em;
 }
 
+// Only add border-radius on button hover — let Discourse handle colours
 .discourse-no-touch .btn:not(.btn-flat):hover,
 .discourse-no-touch .btn:not(.btn-flat).btn-hover {
-  color: var(--tertiary);
-  background: var(--tertiary-low);
   border-radius: var(--mint-border-radius);
-  .fa {
-    color: var(--tertiary);
-  }
 }
 
 .menu-panel .widget-link:hover,
@@ -351,23 +335,9 @@ a {
   background-color: var(--tertiary-low);
 }
 
+// Only apply border-radius to btn-default globally — no colour overrides
 .btn-default {
-  color: var(--tertiary);
-  background: transparent;
-  transition: all 0.2s ease;
   border-radius: var(--mint-border-radius);
-  text-transform: uppercase;
-  border: 1px solid var(--tertiary);
-  .fa {
-    color: var(--tertiary);
-  }
-  &:hover {
-    background: var(--tertiary);
-    color: var(--secondary);
-    .fa {
-      color: var(--secondary);
-    }
-  }
 }
 
 .btn-primary {
@@ -397,16 +367,9 @@ a {
   background-color: var(--tertiary-low);
 }
 
-a:hover {
-  color: var(--tertiary-hover);
-}
+// Removed global a:hover colour override
 
-.image-upload-controls .btn-default {
-  border: 1px solid var(--secondary);
-  .fa {
-    color: var(--secondary);
-  }
-}
+// Removed — was setting white border/icon on white background
 
 .admin-controls,
 .email-template,
@@ -434,9 +397,7 @@ a:hover {
   color: var(--primary-very-low);
 }
 
-.btn[href] {
-  color: var(--secondary);
-}
+// Removed .btn[href] { color: var(--secondary) } — was making link-buttons invisible
 
 summary.select-kit-header.single-select-header.dropdown-select-box-header {
   padding: 0.5em;
