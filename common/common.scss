@@ -618,3 +618,53 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
   display: none;
 }
 }
+
+// === RESPONSIVE BREAKPOINTS ===
+
+// Tablet: 2-column category grid
+@media (max-width: 960px) {
+  .category-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+
+// Phone landscape / small tablet: single column, simplified topic list
+@media (max-width: 768px) {
+  .category-boxes {
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  .latest-topics-snippet .topic-list .topic-list-body .topic-list-item {
+    flex-wrap: wrap;
+    .topic-list-data.main-link {
+      width: 100%;
+      order: 1;
+    }
+    .topic-list-data.posters {
+      width: auto;
+      order: 2;
+    }
+    .topic-list-data.posts,
+    .topic-list-data.age {
+      width: auto;
+      order: 3;
+    }
+  }
+
+  .navigation-topics .container.list-container {
+    padding: 1em;
+  }
+}
+
+// Phone portrait: tighter spacing
+@media (max-width: 480px) {
+  .category-boxes .category-box .category-box-inner .category-details {
+    padding: 1em;
+  }
+
+  .d-header {
+    height: 4em;
+  }
+}
